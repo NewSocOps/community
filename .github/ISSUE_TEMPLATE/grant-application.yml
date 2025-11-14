@@ -1,0 +1,197 @@
+name: Grant Application
+description: Apply for a NewSocOps grant to support your open-source project
+title: "[GRANT] "
+labels: ["grant-candidate"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## Grant Application
+        
+        Thank you for your interest in applying for a NewSocOps grant! Please fill out this form completely and accurately. Review our [grants process documentation](../docs/grants-process.md) before applying.
+        
+  - type: input
+    id: project-name
+    attributes:
+      label: Project Name
+      description: The name of your project
+      placeholder: "e.g., AwesomeOSS"
+    validations:
+      required: true
+      
+  - type: input
+    id: project-url
+    attributes:
+      label: Project Repository URL
+      description: Link to your project's main repository
+      placeholder: "https://github.com/username/project"
+    validations:
+      required: true
+      
+  - type: input
+    id: project-website
+    attributes:
+      label: Project Website (Optional)
+      description: Link to your project's website, if available
+      placeholder: "https://project.example.com"
+    validations:
+      required: false
+      
+  - type: dropdown
+    id: grant-size
+    attributes:
+      label: Grant Size Requested
+      description: Select the grant tier you're applying for
+      options:
+        - Micro Grant ($500 - $2,000)
+        - Standard Grant ($2,000 - $10,000)
+        - Major Grant ($10,000+)
+    validations:
+      required: true
+      
+  - type: input
+    id: amount-requested
+    attributes:
+      label: Specific Amount Requested
+      description: Enter the specific amount you're requesting in USD
+      placeholder: "$5,000"
+    validations:
+      required: true
+      
+  - type: textarea
+    id: project-description
+    attributes:
+      label: Project Description
+      description: Provide a clear description of your project and its goals
+      placeholder: "Tell us about your project..."
+    validations:
+      required: true
+      
+  - type: textarea
+    id: grant-purpose
+    attributes:
+      label: Grant Purpose
+      description: What will the grant funds be used for? Be specific.
+      placeholder: "Development of X feature, infrastructure costs, documentation, etc."
+    validations:
+      required: true
+      
+  - type: textarea
+    id: team-info
+    attributes:
+      label: Team Information
+      description: Who is working on this project? Include relevant experience and GitHub profiles.
+      placeholder: |
+        - Name (@github-username) - Role - Experience
+        - Name (@github-username) - Role - Experience
+    validations:
+      required: true
+      
+  - type: textarea
+    id: budget-breakdown
+    attributes:
+      label: Budget Breakdown
+      description: Provide a detailed breakdown of how funds will be allocated
+      placeholder: |
+        - Development work: $X,XXX
+        - Infrastructure: $X,XXX
+        - Documentation: $X,XXX
+        - Total: $X,XXX
+    validations:
+      required: true
+      
+  - type: textarea
+    id: timeline
+    attributes:
+      label: Timeline and Milestones
+      description: Outline your project timeline with specific milestones
+      placeholder: |
+        - Month 1: Milestone 1
+        - Month 2: Milestone 2
+        - Month 3: Completion and final report
+    validations:
+      required: true
+      
+  - type: textarea
+    id: impact
+    attributes:
+      label: Expected Impact
+      description: How will this project benefit the open-source community?
+      placeholder: "Describe the expected outcomes and community benefits..."
+    validations:
+      required: true
+      
+  - type: textarea
+    id: success-metrics
+    attributes:
+      label: Success Metrics
+      description: How will you measure the success of this project?
+      placeholder: |
+        - Number of users/downloads
+        - Features implemented
+        - Documentation pages created
+        - Community contributions
+    validations:
+      required: true
+      
+  - type: input
+    id: license
+    attributes:
+      label: Project License
+      description: What open-source license does your project use?
+      placeholder: "MIT, Apache 2.0, GPL-3.0, etc."
+    validations:
+      required: true
+      
+  - type: textarea
+    id: previous-funding
+    attributes:
+      label: Previous Funding (Optional)
+      description: Have you received funding from other sources? If yes, please describe.
+      placeholder: "List any previous grants, sponsorships, or funding"
+    validations:
+      required: false
+      
+  - type: textarea
+    id: sustainability
+    attributes:
+      label: Long-term Sustainability
+      description: How will the project be maintained after the grant period?
+      placeholder: "Describe your plan for long-term project sustainability..."
+    validations:
+      required: true
+      
+  - type: input
+    id: contact-email
+    attributes:
+      label: Contact Email
+      description: Primary email for grant-related communication
+      placeholder: "email@example.com"
+    validations:
+      required: true
+      
+  - type: checkboxes
+    id: acknowledgments
+    attributes:
+      label: Acknowledgments
+      description: Please confirm the following
+      options:
+        - label: I have read and agree to the NewSocOps [Code of Conduct](../CODE_OF_CONDUCT.md)
+          required: true
+        - label: I have reviewed the [grants process documentation](../docs/grants-process.md)
+          required: true
+        - label: I understand that grant approval is not guaranteed
+          required: true
+        - label: I agree to provide progress reports as required
+          required: true
+        - label: I will acknowledge NewSocOps funding in project materials if approved
+          required: true
+          
+  - type: textarea
+    id: additional-info
+    attributes:
+      label: Additional Information (Optional)
+      description: Any other information you'd like to share
+      placeholder: "Any additional context or information..."
+    validations:
+      required: false
